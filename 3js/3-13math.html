@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>math 객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>math 객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. Math 객체</b><br>
+                <ul>
+                   <li>수학 계산을 위한 프로퍼티와 메소드 제공</li>
+                   <li>new Math()와 같이 객체를 따로 생성하지 않고 사용</li>
+                   <ul>
+                       <li>Math.프로퍼티 또는 Math.매소드()</li>
+                   </ul>
+                </ul>
+            <b>2. Math 객체의 프로퍼티, 메소드</b>
+            <ul>
+                <li>PI</li>
+                <ul>
+                    <li>원주율 상수 리턴</li>
+                </ul>
+                <li>abs(x)</li>
+                <ul>
+                    <li>x의 절대값 리턴</li>
+                </ul>
+                <li>sin(x), cos(x), tan(x)</li>
+                <ul>
+                    <li>삼각함수</li>
+                </ul>
+                <li>exp(x)</li>
+                <ul>
+                    <li>e의 x제곱 값 리턴</li>
+                </ul>
+                <li>pow(x, y)</li>
+                <ul>
+                    <li>x의 y재곱 값 리턴</li>
+                </ul>
+                <li>sqrt(x)</li>
+                <ul>
+                    <li>x의 제곱근 리턴</li>
+                </ul>
+                <li>floor(x)</li>
+                <ul>
+                    <li>x보다 작거나 같은 수 중 가장 큰 정수 리턴 (내림)</li>
+                </ul>
+                <li>ceil</li>
+                <ul>
+                    <li>x보다 크거나 같은 수 중 가장 작은 정수 리턴 (올림)</li>
+                </ul>
+                <li>round(x)</li>
+                <ul>
+                    <li>x를 반올림한 정수 리턴</li>
+                </ul>
+                <li>max(x,y,z,...)</li>
+                <ul>
+                    <li>x, y, z, ... 중 최댓값</li>
+                </ul>
+                <li>min(x,y,z,...)</li>
+                <ul>
+                    <li>x, y, z, ... 중 최솟값</li>
+                </ul>
+                <li>random()</li>
+                <ul>
+                    <li>0부터 1보다 작은 임의의 실수 리턴</li>
+                </ul>
+            </ul>
+        <b>3. Math.random() 메소드</b>
+        <ul>
+            <li>120부터 150 사이의 랜덤한 정수를 리턴하려면?</li>
+        --> 0부터 30 사이의 랜ㄴ덤한 정수 | +120
+            <ul>
+                <li>Math.floor(Math.random()*31) + 120</li>
+            </ul>
+            <li>원하는 구간에 최솟값~최댓값의 랜덤한 정수 리턴하는 공식화 (함수로 만들어 두면 편함) </li>
+            <ul>
+                <li>Math.floor(Math.random()*(최댓값-최솟값+1)) + 최솟값</li>
+            </ul>
+        </ul>
+
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

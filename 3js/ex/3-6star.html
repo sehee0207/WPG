@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example_3-6</title>
+</head>
+<body>
+    <script>
+        var num = prompt("양의 정수를 입력하세요");
+        document.write("<h3>별 문자 출력하기</h3>");
+        document.write("<hr>");
+        function printStar(num) {
+            if(num>0){
+            for(var i=0;i<num;i++){
+            for(var j=0;j<=i;j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    }
+    else document.write("입력 오류입니다.");
+    }
+    printStar(num);
+        
+    </script>    
+</body>
+</html>

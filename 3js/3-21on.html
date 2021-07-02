@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>onblur, onfocus, radio ...</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>onblur, onfocus, radio ...</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. onblur와 onfocus - 포커스가 변경될 때</b><br>
+            <ul>
+                <li>포커스 (focus)</li>
+                <ul>
+                    <li>포커스는 현재 키 입력에 대한 독접권</li>
+                    <li>브라우저는 포커스를 가지고 있는 HTML 태그 요소에 키 공급</li>
+                </ul>
+                <li>onblur</li>
+                <ul>
+                    <li>포커스를 <mark>잃을 때</mark> 발생하는 이벤트 리스너</li>
+                    EX) 다른 HTML 요소를 클릭하면 현재 HTML 요소는 포커스를 잃는다.
+                </ul>
+                <li>onfocus</li>
+                <ul>
+                    <li>포커스를 <mark>얻을 때</mark> 발생하는 이벤트 리스너</li>
+                    EX) 현재 HTML 요소를 클릭하면, 현재 HTML 요소가 포커스를 얻는다.
+                </ul>
+                <li>focus() 메소드 : DOM 객체의 메소드. 포커스 부여</li>
+            </ul>
+
+            <b>2. 라디오 버튼</b><br>
+            -- 라디오 버튼 객체 <br>
+            <ul>
+                <li>&lt;input type = "radio" &gt;로 만들어진 라디오 버튼 DOM 객체</li>
+                <li>name 값이 동일한 객체들이 하나의 그룹을 이룸</li>
+                <pre>
+                &lt;form&gt;
+                    &lt;input type="radio" name="city" value="seoul"&gt; 서울
+                    &lt;input type="radio" name="city" value="busan"&gt; 부산
+                    &lt;input type="radio" name="city" value="incheon"&gt; 인천
+                &lt;/form&gt;
+                </pre>
+                <li>라디오 버튼 객체들 알아내기 -> name으로</li>
+                <pre>
+                var korea_city = document.getElementsByName("city"); // korea_city[0], korea_city[1], korea_city[2]
+                </pre>
+                <li>선택된 라디오 버튼 알아내기 : radio 객체의 checked 프로퍼티 조사(checked 프로퍼티가 true 이면 선택된 버튼)</li>
+                <pre>
+                var korea_city = document.getElementsByName("city"); //korea_city[0], korea_city[1], korea_city[2]
+                </pre>
+                -> 이 경우 korea_city[1].checked = true 이면 부산이 선택된 것을 의미함
+            </ul>
+
+            <b>3. 체크박스</b><br>
+            <ul>
+                <li>&lt;input type="checkbox"&gt;</li>
+                <li>radio 객체와 달리 name 속성이 모두 다름</li>
+                <li>체크박스 객체의 checked 프로퍼티 사용하여 체크여부 확인</li>
+            </ul>
+
+            <b>4. select 객체와 onchange </b><br>
+            <ul>
+                <li>select 객체는 &lt;select&gt; 태그로 만들어진 콤보 박스</li>
+                -> option 객체는 &lt;option&gt;태그로 표현되는 옵션 아이템
+                <pre>
+                    &lt;select id="fruits"&gt;
+                        &lt;option value="str"&gt;딸기&lt;/option&gt;
+                        &lt;option value="blue"&gt;블루베리&lt;/option&gt;
+                        &lt;option value="apple"&gt;사과&lt;/option&gt;
+                    &lt;/select&gt;
+                </pre>
+                <li>선택된 옵션 알아내기 : select객체의 selectedIndex 프로퍼티 (선택된 옵션에 대한 인덱스를 담고 있음)</li>
+                <pre>
+                    var sel = document.getElementById("fruits");
+                    var index = sel.selectedIndex;
+                </pre>
+                <li>옵션 선택하기 (2가지 방법)</li> <br>
+                <ol>
+                    <li>select객체의 selectedIndex 프로퍼티 사용(선택된 옵션 인덱스)</li>
+                    <pre> sel.selectedIndex=2; // 3번째 옵션 "사과" 선택 </pre>
+                    <li>option객체의 selected 프로퍼티 사용(true:선택됨/false:선택안됨)</li>
+                    <pre>sel.options[2].selected = true; // 3번째 옵션 "사과 선택"</pre>
+                </ol>
+                <li>onchange 리스너</li>
+                <ul>
+                    <li>선택된 옵션이 변경되면 select 객체의 onchange 리스너 호출</li>
+                    <pre>&lt;select id="fruits" onchange="changeImage()"&gt;...&lt;/select&gt;</pre>
+                </ul>
+            </ul>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

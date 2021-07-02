@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>키 이벤트</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>키 이벤트</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 키 이벤트</b><br>
+            <ul>
+                <li>onkeydown : 키가 눌러지는 순간 호출. 모든 키에 대해 작동</li>
+                <li>onkeyup : 눌러진 키가 떼어지는 순간 호출</li>
+                <li>등등 ...</li>
+            </ul>
+
+            <b>2. 키보드 이벤트 객체 프로퍼티</b><br>
+            <ul>
+                <li>keyCode : 입력된 키의 유니코드 값</li>
+                <li>altKey : Alt 키가 눌려진 상태면 true, 아니면 false</li>
+                <li>ctrlKey : Ctrl 키가 눌려진 상태면 true, 아니면 false</li>
+                <li>shiftKey : Shift 키가 눌려진 상태면 true, 아니면 false</li>
+            </ul>
+
+            <b>3. 예제 ; 텍스트 창에 입력한 키 출력하기</b><br>
+            <img width="300px" src="./image/3-19ss.png">
+            <div id="text">
+                - 텍스트 창에 누른 키가 어떤 키인지 구분하고 출력<br>
+                - 그냥 키 이외에도 Alt, Shift, Ctrl 키 또한 구분 후 출력<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="400px" src="./image/3-19ex.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

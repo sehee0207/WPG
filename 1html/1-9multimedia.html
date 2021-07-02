@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>멀티미디어</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2  align="center"><div>[HTML]</div>멀티미디어</h2>
+    <hr>
+    <p>
+        HTML5 부터 &lt;audio&gt;, &lt;video&gt; 태그 사용 가능 <br><br>
+        <b>1. &lt;audio&gt;</b><br>
+        1) src : 재생할 오디오가 존재하는 URL 지정<br>
+        2) autoplay : 음악 자동 재생<br>
+        3) controls : 브라우저가 오디오 재생 제어기 표시<br>
+        4) loop : 반복 재생<br>
+        5) muted : 음소거 <br>
+        6) &lt;source&gt; : 하나의 오디오 소스에 여러 형식의 미디어 파일을 한번에 지정해주는 태그, 호환성 증가<br>
+        * 재생 가능한 오디오 파일 형식에는 제한이 있음 <br><br>
+
+        <b>2. &lt;video&gt;</b><br>
+        1) 속성은 audio 와 거의 동일하다<br>
+        2) src, autoplay, controls, loop, muted<br>
+        3) poster : 재생 전이나 불가 시 표시되는 이미지 <br>
+        4) width, height : 비디오 너비, 높이<br>
+        5) &lt;source&gt;<br>
+        * 재생 가능한 비디오 파일 형식에는 제한이 있음 <br><br>
+
+        <b>3. 인라인 프레임</b><br>
+        : 현재 html 페이지 내에 내장 윈도우를 만들어 다른 html 페이지를 출력 할 수 있도록 해줌<br>
+        &lt;iframe&gt; 태그에 의해 만들어지는 윈도우 -> 인라인 프레임<br>
+        1) src : 프레임에 표시할 문서의 URL 지정<br>
+        2) width, height : 너비, 높이 <br>
+        3) name : 인라인 프레임 윈도우의 이름 <br><br>
+
+        <b>4. 예제 ; </b><br>
+        <img width="400px" src="./image/1-9fffff1.png">
+        <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. 좋아하는 노래 뮤비나 영상 화면에 우클릭 후 소스 코드 복사 누르기<br>
+                2. 복사된 소스 코드 붙여넣기<br>
+                ** 저작권에 유의 ** 
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img width="500px" src="./image/1-9ex.png">
+            </div>
+        </div>
+        <br>
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

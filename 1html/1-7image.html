@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2 align="center"><div>[HTML]</div>이미지 태그</h2>
+    <hr>
+    <p>
+        &lt;img&gt; 태그 사용 : 단일 태그<br>
+        웹 페이지에서 사용 할 수 있는 이미지 파일의 종류 : BMP, GIF, PNG, JPG(JPEG)<br><br>
+
+        <b>1. src 속성</b><br>
+        1) 내 컴퓨터에 이미지 파일이 있을 때 : 절대, 상대 경로로 지정<br><br>
+        2) 웹 상의 이미지 링크를 사용 할 때
+        : 크롬 - 이미지 찾기 - 오른쪽 마우스 클릭 - 이미지 주소 복사<br>
+        단, 인터넷에 접속 할 수 있어야 화면에 표시가 가능, 저작권 주의<br><br>
+
+        <b>2. width, height 속성</b><br>
+        : 이미지 크기 조정, 사용 안 할 때는 원본 이미지 크기 그대로 표시<br><br>
+
+        <b>3. alt 속성</b><br>
+        : 어떤 이유로 이미지를 화면에 표시하지 못했을 경우 표시되는 대체 텍스트 지정<br><br>
+
+        <b>4. 이미지 관련 태그</b><br>
+        1) &lt;figure&gt; : 이미지, 오디오, 비디오, 텍스트, 표 등 독립적인 콘텐츠를 담는 컨테이너 역할을 하는 태그<br><br>
+        2) &lt;figcaption&gt; : figure 태그 영역 안에서 사용하며 설명 문구를 담는 태그<br>
+        -> 하나의 &lt;figure&gt; 안에는 하나의 &lt;figcaption&gt; 사용<br><br>
+        
+        <b>5. 예제 ; </b><br>
+        <img height="400px" src="./image/1-7ijj1.png">
+        <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. img 태그로 이미지 넣기<br>
+                (웹 상의 이미지 링크를 사용하고 싶다면, 구글에 관련 사진을 검색하고<br>오른쪽 마우스를 눌러 이미지 주소 복사하기 후 src 에 붙여넣기)<br>
+                2. 사진과 설명을 하나씩 묶어주기<br>
+                3. 필요한 속성은 추가적으로 넣어주기<br>
+                4. 참고한 자료 출처 기재 (스스로 해보세요!)<br>
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img width="500px" src="./image/1-7ex.png">
+            </div>
+        </div>
+
+        <br>
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

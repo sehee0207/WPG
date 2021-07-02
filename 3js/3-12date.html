@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>date 객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>date 객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. Date 객체</b><br>
+               <ul>
+                   <li>Date 객체</li>
+                   <ul>
+                       <li>시간 정보를 담는 객체</li>
+                       <li>현재 시간 정보로 초기화된 객체 생성</li>
+                       EX) var now = new Date(); <br>
+                       <li>지정된 시간으로 객체 생성</li>
+                       var startDay = new Date(2020, 2, 1); // 2020년 3월 1일(2는 3월을 뜻함);
+                   </ul>
+                   <li>Date 객체 활용</li>
+                   <pre>
+    var now = new Date(); // 현재 시간 정보로 초기화된 객체 생성
+    var date = now.getDate(); // -일
+    var hour = now.getHours(); // -시
+    var day = now.getDay(); // -요일을 정수로 리턴 (일:0 ~ 토:6)
+                   </pre>
+               </ul>
+
+           <b>2. Date 객체의 메소드 _ 날짜 정보를 가져올 때 (get~)</b>
+               <ul>
+                   <li>getFullYear()</li>
+                    <ul>
+                        <li>4자리 연도 리턴</li>
+                    </ul>
+                   <li>getMonth()</li>
+                   <ul>
+                       <li>월을 나타내는 정수 리턴</li>
+                   </ul>
+                   <li>getDate()</li>
+                   <ul>
+                       <li>날짜 리턴</li>
+                   </ul>                   
+                   <li>getDay()</li>
+                   <ul>
+                       <li>요일을 나타내는 정수 리턴</li>
+                   </ul>
+                   <li>getHours</li>
+                   <ul>
+                       <li>정수 시간 리턴(0~23)</li>
+                   </ul>
+                   <li>getMinutes()</li>
+                   <ul>
+                       <li>정수 분 리턴(0~59)</li>
+                   </ul>
+                   <li>getSeconds()</li>
+                   <ul>
+                       <li>정수 초 리턴(0~59)</li>
+                   </ul>
+                   <li>getMilliseconds</li>
+                   <ul>
+                       <li>정수 밀리초 리턴(0~999)</li>
+                   </ul>
+                   <li>getTime()</li>
+                   <ul>
+                       <li>1970년 1월 1일 0시 0분 0초를 기준으로 현재 시간까지 경과된 밀리  초 리턴</li>
+                   </ul>
+               </ul>
+            <b>3. Date 객체의 메소드 _ 날짜 정보를 수정할 때 (set~)</b>
+            <ul>
+                <li>setFullYear(year)</li>
+                <ul>
+                    <li>year를 년도 값으로 저장</li>
+                </ul>
+                <li>setMonth(month)</li>
+                <ul>
+                    <li>month(0~11)를 월 값으로 저장</li>
+                </ul>
+                <li>setDate(date)</li>
+                <ul>
+                    <li>date(1~31)를 날짜 값으로 저장</li>
+                </ul>
+                <li>setHours(hour)</li>
+                <ul>
+                    <li>hour(0~23)를 시간 값으로 저장</li>
+                </ul>
+                <li>setMinutes(minute)</li>
+                <ul>
+                    <li>minute(0~59)를 분 값으로 저장</li>
+                </ul>
+                <li>setSeconds(second)</li>
+                <ul>
+                    <li>second(0~59)를 초 값으로 저장</li>
+                </ul>
+                <li>setMilliseconds(ms)</li>
+                <ul>
+                    <li>ms(0~999)를 밀리초 값으로 저장</li>
+                </ul>
+                <li>setTime(t)</li>
+                <ul>
+                    <li>밀맃초 단위인 t값으로 시간 저장</li>
+                </ul>
+            </ul>
+
+            <b>4. Date 객체의 메소드 _ 문자열로 리턴(to~String)</b>
+            <ul>
+                <li>toGMTString()</li>
+                <ul>
+                    <li>객체에 든 시간 정보를 GMT 표준 표기 방식의 문자열로 리턴</li>
+                </ul>
+                <li>toLocaleString()</li>
+                <ul>
+                    <li>객체에 든 날짜, 시간 정보를 로컬 표현의 문자열로 리턴</li>
+                </ul>
+                <li>toLocaleTimeString()</li>
+                <ul>
+                    <li>객체에 든 시간 정보를 문자열 형식으로 리턴</li>
+                </ul>
+                <li>toLocaleDateString()</li>
+                <ul>
+                    <li>객체에 든 날짜 정보를 문자열 형식으로 리턴</li>
+                </ul>
+            </ul>
+
+            <b>5. 예제(1) ; 현재 시각 출력하기</b><br>
+            <img width="300px" src="./image/3-12ss1.png">
+            <div id="text">
+                - 위 사진 그대로 출력<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="300px" src="./image/3-12ex1.png">
+            </div>
+            <br>
+            <b>6. 예제(2) ; 생일 입력 시 요일 출력하기</b><br>
+            <img src="./image/3-12ss2.png">
+            <div id="text">
+                - 년, 월, 일을 입력 받을 변수 지정, 입력 받기<br>
+                - 요일을 출력하기<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드 <br>
+                <img width="400px" src="./image/3-12ex2.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 객체 개념</b><br>
+                <ul>
+                    <li>현실 세계는 객체들의 집합</li>
+                    <ul>
+                        <li>사람, 책상, 자동차, TV 등</li>
+                        <li>객체는 자신만의 고유한 속성 존재</li>
+                        EX) <br>
+                        자동차 - &lt;색상:오렌지, 배기량:3000cc, 제조사:한성, 번호:서울1-1&gt; <br>
+                        사람 - &lt;이름:김선린, 나이:18, 성별:남, 주소:서울&gt; <br>
+                        은행계좌 - &lt;소유자:황기태, 계좌번호:111, 잔액:35000원&gt;
+                    </ul>
+                </ul>
+
+            <b>2. 자바스크립트 객체</b>
+            <ul>
+                <li>자바스크립트 객체 구성</li>
+                <ul>
+                    <li>자바스크립트에서 기본타입(숫자, 문자열, 불린값, null, undefined)를 제외한 모든 것은 객체이다.</li>
+                    <li>기본타입은 하나의 값만을 가지는데 비해, 참조타입인 객체는 여러 값을 가질 수 있다.</li>
+                    <li>객체는 여러 개의 프로퍼티와 메소드로 구성</li>
+                    <ul>
+                        <li>프로퍼티 : 객체의 고유한 속성</li>
+                        <li>메소드 : 함수. 객체 내부의 프로퍼티 값을 조작하거나 연산을 수행하고 결과 리턴</li>
+                    </ul>
+                </ul>
+            </ul>
+            <b>3. 자바스크립트 객체 종류</b>
+            <ul>
+                <li>자바스크립트는 객체 기반 언어</li>
+                +) 자바스크립트는 객체 지향 언어 아님 <br>
+              --> 캡슐화, 상속, 다형성 등의 특징을 완벽히 갖추지 못함
+                <li>브라우저가 제공하는 자바스크립트 객체</li>
+                <ol>
+                    <li>코어 객체(내장 객체)</li>
+                    <ul>
+                        <li>자바스크립트 언어가 실행되는 어디서나 사용 가능한 기본 객체</li>
+                        <li>자바스크립트 엔진에 내장되어 있음</li>
+                        <li>배열(Array), 날짜(Date), 문자(String), 수학(Math) 타입 등</li>
+                    </ul>
+                    <li>문서 객체(DOM(Document Object Model))</li>
+                    <ul>
+                        <li>HTML 문서에 작성된 각 HTML 태그들을 객체화한 것들</li>
+                        <li>HTML 문서의 내용과 모양을 제어하기 위한 목적</li>
+                    </ul>
+                    <li>브라우저 객체(BOM(Browser Object Model))</li>
+                    <ul>
+                        <li>자바스크립트로 브라우저를 제어하기 위해 제공되는 객체</li>
+                        <li>브라우저에 계층 구조로 내장되어 있는 객체</li>
+                        <li>window, screen, location, history, navigator 등</li>
+                    </ul>
+                </ol>
+            </ul>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

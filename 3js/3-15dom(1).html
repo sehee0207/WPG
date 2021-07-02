@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>dom 객체(1)</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>dom 객체(1)</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. HTML페이지와 자바스크립트 객체</b><br>
+                <ul>
+                    <li>자바스크립트 코드는 브라우저로부터 3가지 유형의 객체를 제공받아 활용할 수 있다. (BOM객체/코어 객체/HTML DOM 객체)</li>
+                </ul>
+            <b>2. HTML DOM(Document Object Model)</b><br>
+            <ul>
+                <li>HTML DOM</li>
+                <ul>
+                    <li>웹 페이지에 작성된 HTML 태그 당 DOM 객체 생성</li>
+                    EX) &lt;div&gt; ... &lt;/div&gt; : div 객체<br>
+                    &lt;p&gt; ... &lt;/p&gt; : p 객체
+                    <li>목적</li>
+                -->HTML 태그가 출력된 모양이나 콘텐츠를 동적으로 제어하기 위해
+                    <ul>
+                        <li>각 태그의 모양(CSS3 스타일 시트) 접근 및 변경</li>
+                        <li>HTML 태그에 의해 출력된 콘텐츠(텍스트나 이미지) 변경</li>
+                    </ul>
+                </ul>
+                <li>DOM 트리</li>
+                <ul>
+                    <li>HTML 태그의 포함관계에 따라 DOM 객체의 트리 생성</li>
+                    <li>부모 자식의 계층적 관계로 구성</li>
+                </ul>
+                <li>DOM 객체</li>
+                <ul>
+                    <li>DOM 트리의 한 노드 </li>
+                    <li>HTML 태그 당 하나의 DOM 객체 생성</li>
+                    +) DOM 노드(Node), DOM 엘리먼트(Element)라고도 불림
+                </ul>
+            </ul>
+
+            <b>3. DOM 트리의 특징</b><br>
+            <ul>
+                <li>DOM 트리의 특징</li>
+                <ul>
+                    <li>DOM 트리의 루트는 document 객체 <mark>(document객체는 DOM객체가 아님)</mark></li>
+                    <li>DOM 객체의 종류는 HTML 태그 종류만큼 존재, 이름은 태그 이름과 같음</li>
+                    <li>HTML 태그 당 DOM 객체가 하나씩 생성</li>
+                    +) 같은 이름의 태그가 여러 개 있어도 각 태그마다 DOM 객체 생성
+                    <li>HTML 태그의 포함관계에 따라 DOM 트리에 부모자식 관계</li>
+                </ul> <br>
+                <li>브라우저가 HTML 태그를 화면에 출력하는 과정</li>
+                <ol>
+                    <li>브라우저가 DOM 트리의 틀 (document객체) 생성</li>
+                    <li>브라우저가 HTML 태그를 읽고 DOM 트리에 DOM 객체 생성</li>
+                    <li>브라우저는 DOM 객체를 화면에 출력</li>
+                    <li>HTML 문서 로딩이 완료되면 DOM 트리 완성</li>
+                    <li>DOM 객체 변경 시, 브라우저는 해당 HTML 태그의 출력 모양을 바로 갱신</li>
+                </ol>
+            </ul>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+
+        </p>
+    </div>
+</body>
+</html> 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>document 객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>document 객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. document 객체</b><br>
+                <ul>
+                    <li>document</li>
+                    <ul>
+                        <li>DOM트리의 최상위 객체</li>
+                         - 브라우저는 HTML 문서 로드 전, document 객체를 먼저 생성<br>
+                         - document 객체를 뿌리로 하여 DOM 트리 생성
+                        <li>HTML 문서 전체를 대변하는 객체</li>
+                        <li>DOM 객체를 접근하는 경로의 시작점</li>
+                        <li>document 객체는 <mark> 객체가 아님 </mark></li>
+                    </ul>
+                    <li>document객체의 프로퍼티, 메소드, 컬렉션</li>
+                    <ul>
+                        <li>프로퍼티 - HTML 문서의 전반적인 속성 나타냄</li>
+                        <li>메소드 - DOM 객체 검색, 새로운 DOM 객체 생성 등 HTML 문서 전반적 제어 지원</li>
+                        <li>컬렉션 - HTML문서에 만들어진 동일한 이름의 HTML태그들을 배열처럼 접근할 수 있음</li>
+                    </ul>
+                    <li>document 객체 접근</li>
+                    <ul>
+                        <li>window.document 또는 document 이름으로 접근</li>
+                    --> document 객체도 window객체의 자식이니까
+                    </ul>
+                </ul>
+
+            <b>3. DOM 트리의 특징</b><br>
+            <ul>
+                <li>DOM 트리의 특징</li>
+                <ul>
+                    <li>DOM 트리의 루트는 document 객체 <mark>(document객체는 DOM객체가 아님)</mark></li>
+                    <li>DOM 객체의 종류는 HTML 태그 종류만큼 존재, 이름은 태그 이름과 같음</li>
+                    <li>HTML 태그 당 DOM 객체가 하나씩 생성</li>
+                    +) 같은 이름의 태그가 여러 개 있어도 각 태그마다 DOM 객체 생성
+                    <li>HTML 태그의 포함관계에 따라 DOM 트리에 부모자식 관계</li>
+                </ul> <br>
+                <li>브라우저가 HTML 태그를 화면에 출력하는 과정</li>
+                <ol>
+                    <li>브라우저가 DOM 트리의 틀 (document객체) 생성</li>
+                    <li>브라우저가 HTML 태그를 읽고 DOM 트리에 DOM 객체 생성</li>
+                    <li>브라우저는 DOM 객체를 화면에 출력</li>
+                    <li>HTML 문서 로딩이 완료되면 DOM 트리 완성</li>
+                    <li>DOM 객체 변경 시, 브라우저는 해당 HTML 태그의 출력 모양을 바로 갱신</li>
+                </ol>
+            </ul>
+
+            <b>4. document 객체의 주요 프로퍼티</b><br>
+            <ul>
+                <li>프로퍼티</li>
+                <ul>
+                    <li>location</li>
+                    <ul>
+                        <li>현재 문서의 URL 정보를 가진 location 객체의 레퍼런스</li>
+                    </ul>
+                    <li>domain</li>
+                    <ul>
+                        <li>서버의 도메인 이름</li>
+                    </ul>
+                    <li>lastModified</li>
+                    <ul>
+                        <li>"MM/DD/YYYY hhmmss" 형식의 문서 최근 수정 시간</li>
+                    </ul>
+                    <li>readyState</li>
+                    <ul>
+                        <li>문서의 현재 로딩 상태를 나타내는 문자열</li>
+                        +) loading -> interactive -> complete
+                    </ul>
+                    <li>title</li>
+                    <ul>
+                        <li>문서의 탭 제목 문자열. 없으면 빈 문자열</li>
+                    </ul>
+                    <li>body</li>
+                    <ul>
+                        <li>body 객체에 대한 레퍼런스</li>
+                    </ul>
+                    <li>head</li>
+                    <ul>
+                        <li>head 객체에 대한 레퍼런스</li>
+                    </ul>
+                    <li>defaultView</li>
+                    <ul>
+                        <li>문서가 출력된 브라우저 윈도우에 대한 레퍼런스</li>
+                    </ul>
+                    <li>URL</li>
+                    <ul>
+                        <li>현재 문서의 URL</li>
+                    </ul>
+                </ul>
+                <li>컬렉션</li>
+                <ul>
+                    <li>images</li>
+                    <ul>
+                        <li>문서 내에 모든 <img> 객체들의 컬렉션</li>
+                    </ul>
+                    <li>links</li>
+                    <ul>
+                        <li>문서 내의 href 속성을 가진 모든 링크 객체(예:&lt;a&gt;)들의 컬렉션</a></li>
+                    </ul>
+                    <li>forms</li>
+                    <ul>
+                        <li>문서 내의 모든 폼&lt;form&gt;객체들의 컬렉션</li>
+                    </ul>
+                </ul>
+                <li>메소드</li>
+                <ul>
+                    <li>getElementsByTagName()</li>
+                    <ul>
+                        <li>주어진 태그 이름을 가진 모든 태그의 컬렉션 리턴</li>
+                    </ul>
+                    <li>getElementsByClassName()</li>
+                    <ul>
+                        <li>주어진 class속성 값을 가진 모든 태그의 컬렉션 리턴</li>
+                    </ul>
+                    <li>getElementById()</li>
+                    <ul>
+                        <li>주어진 id속성 값을 가진 첫번째 DOM 객체 리턴</li>
+                    </ul>
+                    <li>getElementsByName()</li>
+                    <ul>
+                        <li>주어진 name 속성 값을 가진 모든 태그의 컬렉션 리턴</li>
+                    </ul>
+                    <li>querySelector()</li>
+                    <ul>
+                        <li>선택자로 가장 처음 선택되는 DOM 객체 리턴</li>
+                    </ul>
+                    <li>querySelectorAll()</li>
+                    <ul>
+                        <li>선택자로 가장 처음 선택되는 DOM 객체 리턴</li>
+                    </ul>
+                    <li>write()</li>
+                    **주의사항**
+                    <ul>
+                        <li>HTML문서가 로드되어 출력되고 나면, 해당 document 객체가 닫힘</li>
+                        -> 더이상 HTML 텍스트를 추가 출력 할 수 없음
+                        <li>document 객체 닫힌 후 document.wirte() 실행 시, 브라우저 document 객체에 담긴 현재 문서를 지우고 빈 document를 새로 열게 됨</li>
+                        ->현재 HTML 문서가 지워지고 새로운 문서가 작성되는 결과
+                    </ul>
+                    <ul>
+                        <li>document에 HTML콘텐츠 삽입. DOM트리에 연결되고 브라우저에 출력됨</li>
+                    </ul>
+                    <li>writeln()</li>
+                    <ul>
+                        <li>write() 후 '\n' 추가 출력. (\n은 빈칸 하나! 줄바꿈 아님!)</li>
+                    </ul>
+                    <li>open()</li>
+                    <ul>
+                        <li>document에 담긴 콘텐츠를 모두 지우고, 새로운 HTML 콘텐츠를 쓸 수 있도록 열기</li>
+                    </ul>
+                    <li>close()</li>
+                    <ul>
+                        <li>document 객체에 있는 HTML 콘텐츠를 브라우저에 출력하고, 더이상 쓰기를 받지 않음</li>
+                    </ul>
+                    <li>createElement()</li>
+                    <ul>
+                        <li>HTML태그의 동적 생성</li>
+                    </ul>
+                </ul>
+            </ul>
+            <b>5. DOM트리에서 DOM객체 찾기</b><br>
+            <ol>
+                <li>태그 이름으로 찾기 : getElementsByTagName(태그이름)</li>
+                <ul>
+                    <li>태그이름이 같은 모든 DOM 객체들을 찾아 컬렉션으로 리턴</li>
+                    <li>EX) &lt;div&gt;태그의 모든 DOM객체 찾기</li>
+                    <pre> var myDiv = document.getElementsByTagName("div"); </pre>
+                </ul>
+                <li>class 속성으로 찾기 : getElementsByClassName(클래스 이름)</li>
+                <ul>
+                    <li>class속성이 같은 모든 DOM 객체들을 찾아 컬렉션으로 리턴</li>
+                    <li>EX) class 속성이 "class1"인 객체 찾기</li>
+                    <pre>
+&lt;div class = "class1"&gt; ... &lt;/div&gt;
+var firstClass = document.getElementsByClassName("class1");
+                    </pre>
+                </ul>
+                <li>id속성으로 찾기 : getElementById(아이디 이름)</li>
+                <ul>
+                    <li>id 속성이 같은 DOM객체를 처음에 나오는 객체 리턴(id는 유일하기 때문에 객체 하나)</li>
+                </ul>
+                <li>name 속성으로 찾기 : getElementsByName(name 이름)</li>
+                <ul>
+                    <li>name속성이 같은 모든 DOM 객체들을 찾아 컬렉션으로 리턴</li>
+                </ul>
+            </ol>
+            <b>6. DOM트리에서 DOM객체 찾기</b><br>
+            <ul>
+                <li>CSS 선택자로 찾기</li>
+                <ul>
+                    <li>querySelector(선택자) : 선택자로 가장 처음 선택되는 문서 객체를 가져옴</li>
+                    <li>querySelectorAll(선택자) : 선택자를 통해 선택되는 모든 문서 객체를 컬렉션으로 가져옴</li>
+                </ul>
+                <li>선택자?</li>
+                <ul>
+                    <li>태그 이름</li>
+                    <li>#아이디</li>
+                    <li>.클래스</li>
+                    <li>부모>자식</li>
+                    <li>조상 자손</li>
+                </ul>
+            </ul>
+
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

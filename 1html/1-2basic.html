@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./hee.css">
+    <title>기본 구조</title>
+</head>
+<body>
+    <h2 align="center"><div>[HTML]</div>기본 구조</h2>
+    <hr>
+    
+    <img src="./image/1-2basic1.png">
+    <h6>((위 화면은 VS code 에서 '!' (느낌표) 입력 후 tab 키를 눌렀을 때 나타나는 기본 구조 입니다.))</h6>
+
+    <div>
+        <p>
+                <b>1. &lt;!DOCTYPE html&gt;<br></b>
+                : 웹페이지에 사용된 HTML 의 종류와 버전 지정 <br>
+                문서 유형 선언 부분, 현재 문서는 HTML5 언어로 작성된 웹 문서<br>
+                <br>
+                <b>2. &lt;html&gt;</b><br>
+                : 웹 문서의 시작과 끝을 나타냄<br><br>
+                
+                <b>3. &lt;head&gt;</b><br>
+                    1) &lt;meta charset="UTF-8"&gt;<br>
+                    : 브라우저에서 표시되는 과정에서 인코딩 할 때 지정된 문자코드로 인코딩 하라는 뜻<br>
+                    <ul>
+                    <li>특별한 이유가 없는 한 HTML5 문서에서는 대부분 UTF-8 로 지정<br></li>
+                    <li>한국어, 영어, 일본어만 사용할 경우에는 euc-kr 을 선언하기도 하지만 권장하지 X</li>
+                    </ul>
+                    2) &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                    : 사용자의 보이는 영역이 기기별로 다르므로 이것을 지정해주는 태그<br>
+                    우리가 개발을 할 때는 딱히 신경쓰지 않아도 됨<br><br>
+                    3) &lt;title&gt;<br>
+                    : 탭 제목<br><br>
+
+                <b>4. &lt;body&gt;</b><br>
+                : 실제 브라우저 화면에 표시될 내용
+                <br>
+                
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>

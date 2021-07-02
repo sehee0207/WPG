@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>이벤트 객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>이벤트 객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 이벤트 객체 (event object) </b><br>
+            <ul>
+                <li>발생한 이벤트에 관련된 다양한 정보를 담은 객체</li>
+                <ul>
+                    <li>EX) mousedown 이벤트의 이벤트 객체 : 마우스 좌표, 버튼 번호 등의 정보 포함 <br>
+                    keydown 이벤트의 이벤트 객치 : 키 코드 값, &lt;shift&gt;키 눌러졌는지 등의 정보 포함</li>
+                </ul>
+                <li>이벤트 리스너는 이벤트 객체의 프로퍼티 값을 통해 발생한 이벤트에 관한 자세한 정보를 알 수 있음</li>
+                <li>이벤트가 완전히 처리되고 나면 이벤트 객체는 소멸됨</li>
+            </ul>
+            <b>2. 이벤트 객체 전달받기</b><br>
+            
+        --> 이벤트 객체는 이벤트 리스너 함수의 첫 번째 매개변수에 전달</li>
+            
+            <ol>
+                <li>이름을 가진 이벤트 리스너 함수</li> <br>
+                function f(e){ //첫 번째 매개변수 e에 이벤트 객체 전달받음. (이름은 자유) <br>
+                ......} <br>
+                obj.onclick = f; // obj 객체의 onclick 리스너로 함수 f 등록 <br><br>
+                <li>익명 함수</li> <br>
+                obj.onclick = function(e){ //첫 번째 매개변수 e에 이벤트 객체 전달 받음 <br>
+                ... <br>
+            } <br><br>
+                <li>HTML 태그에 이벤트 리스너 등록하는 경우 : event 라는 이름으로 전달</li> <br>
+               EX)
+             <pre>
+                 function f(e){
+                     ...
+                 }
+                 ...
+                 &lt;button onclick="f(event)"&gt;버튼&lt;/button&gt;
+                 &lt;div onclick = "alert(event.type)"&gt;버튼&lt;/div&gt; // 이벤트 종류 출력
+             </pre>
+            </ol> 
+
+            <b>3. 이벤트 객체에 들어 있는 정보</b><br>
+            -->이벤트 객체에 들어 있는 정보 <br>
+            <ul>
+                <li>현재 발생한 이벤트에 관한 다양한 정보(프로퍼티, 메소드)</li>
+                <li>이벤트의 종류마다 조금씩 다름</li>
+            </ul>
+            <ul>
+                <li>type 프로퍼티 : 현재 발생한 이벤트의 종류를 나타내는 문자열(click, load 등)</li>
+
+                <li>target 프로퍼티 : 이벤트를 발생시킨 객체(DOM객체 혹은 HTML 태그</li>
+
+                <li>currentTarget 프로퍼티 : 현재 이벤트 리스너를 실행하고 있는 DOM 객체</li>
+
+                <li>defaultPrevented 메소드 : 이벤트의 디폴트 행동이 취소되었는지를 나타내는 true/false 값</li>
+
+                <li>preventDefault() 메소드 : 이벤트의 디폴트 행동을 취소시키는 메소드</li>
+            </ul>
+            
+            <b>4. 이벤트 객체에 들어 있는 정보</b>
+            - target 프로퍼티 : 이벤트 타겟 객체를 가리킴 <br>
+            <ul>
+                <li>이벤트 타겟 : 이벤트를 발생시킨 DOM 객체(태그)</li>
+                <li>&lt;button&gt; 태그의 버튼을 클릭하였으면, 이때 click 이벤트의 이벤트 타겟은 버튼</li>
+                -  &lt;button onclick="f(event)"&gt;클릭하세요&lt;/button&gt;<br>
+            </ul>
+
+            <b>4. 이벤트의 디폴트 행동</b><br>
+            <ul>
+                <li>특정 이벤트에 대한 HTML 태그의 기본 행동</li>
+                <li>예시</li>
+                <ul>
+                    <li>&lt;a&gt;의 click 이벤트의 디폴트 행동 : 웹 페이지 이동</li>
+                    <li>submit 버튼의 click 이벤트의 디폴트 행동 : </li>
+                    <li>reset 버튼의 click 이벤트의 디폴트 행동 : 폼 초기화</li>
+                    <li>&lt;input type = "checkbox&gt;의 click 이벤트의 디폴트 행동 : 체크박스 선택</li>
+                </ul>
+            </ul>
+
+            <b>5. 이벤트의 디폴트 행동 취소, preventDefault()</b> <br>
+            <ul>
+                <li>이벤트의 디폴트 행동을 막는 방법</li>
+                <ol>
+                    <li>이벤트 리스너에서 false리턴</li><br>
+                    &lt;a href="www.google.co.kr" onclick="return false"&gt; 이동 안되는 링크 &lt;/a&gt; <br><br>
+                    <li>이벤트 객체의 preventDefault() 메소드 호출</li><br>
+                    &lt;a href="www.google.co.kr" onclick="event.preventDefault();"&gt; 이동 안되는 링크 &lt;/a&gt; <br><br>
+                    --> 그러나 이벤트 객체의 cancelable 프로퍼티가 true인 경우만 취소 가능 (모든 이벤트의 디폴트 행동을 금지시킬 수 있는 것은 아님)
+                </ol>
+            </ul>
+            
+            <b>6. 예제 ; 이벤트의 디폴트 행동 취소</b><br>
+            <img src="./image/3-18ss1.png">
+            <div id="text">
+                - '술' 란에 체크가 되지 않도록 행동 취소<br>
+                - 네이버로 이동하겠냐는 질문에 확인을 눌렀을 때만 이동<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="400px" src="./image/3-18ex1.png">
+            </div>
+            <br>
+
+            <b>7. 예제 ; 마우스 올렸을 때의 이벤트 출력하기</b><br>
+            <img width="600px" src="./image/3-18ss2.png">
+            <div id="text">
+                - '마우스를 올려보세요' 에 마우스를 올렸을 때 이벤트 값 출력<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="400px" src="./image/3-18ex2.png">
+            </div>
+
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

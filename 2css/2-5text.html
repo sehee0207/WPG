@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>텍스트 스타일</title>
+    <link rel="stylesheet" href="./hs.css">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>텍스트 스타일</h2>
+    <hr>
+
+    <b>1. color : 텍스트 색상</b><br>
+    <b>- 지정 방법</b>
+        <ol>
+            <li>이름으로 표현 : { color : "red"; }</li>
+            <li>16진수 코드로 표현 : { color: "#FF0000";} </li>
+            <li>rgb()로 표현_10진수 코드 또는 퍼센트로 표현 : { color : rgb(255, 0, 0);}</li>
+        </ol>
+                
+    <b>2. text-align : 텍스트 정렬</b><br>
+    -> left, center, right, justify<br>
+    <br>
+
+    <b>3. text-decoration> : 텍스트 장식</b><br>
+    -> none, overline, line-through, underline<br>
+    <br>
+    
+    <b>4. text-transform : 텍스트 대소문자 변환</b><br>
+    -> none, uppercase, lowercase, capitalize (차례대로 그대로, 대문자, 소문자, 대문자소문자 반대)<br>
+    <br>
+
+    <b>5. text-shadow : 텍스트 그림자</b><br>
+    -> 강조효과, 입체적 효과<br>
+    { text-shadow: <i>가로거리(x방향)</i>, <i>세로거리(y방향)</i>, <i>번짐정도</i>, <i>색상</i>; }
+        <ul>
+            <li>필수요소 -> 가로거리(x방향), 세로거리(y방향)</li>
+            <li>여러 개의 그림자 효과 가능( , 로 구분)</li>
+        </ul>
+
+    <b>6. 다중 컬럼 : 다단 설정</b><br>
+        <ul>
+            <li>column-count : 컬럼 개수</li>
+            <li>column-gap : 컬럼 사이의 간격</li>
+            <li>column-rule: 구분선 스타일(구분선 두께, 스타일, 색상)</li>
+        </ul>
+
+    <b>7. line-height : 줄 간격 지정</b><br>
+    -> 보통 글자크기의 1.5 ~ 2 배면 적당<br><br>
+
+    <b>- 사용 예시</b><br>
+        p {font-size: 15px; line-height:30px;}<br>
+        p {font-size: 15px; line-height:2.0;}<br>
+        p {font-size: 15px; line-height:200%;}<br>
+    
+    <br>
+    <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+</body>
+</html>

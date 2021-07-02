@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 태그</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2 align="center"><div>[HTML]</div>테이블 태그</h2>
+    <hr>
+    <p>
+        : 웹 문서에서 자료를 구조화하여 정리 할 때 사용<br>
+        행(row), 열(column), 셀(cell)<br>
+        <ul>
+            <li>&lt;table&gt; : 표 전체를 담는 컨테이너</li>
+            <li>&lt;tr&gt; : 행, 여러 td th 포함</li>
+            <li>&lt;td&gt; : 데이터 셀</li>
+            <li>&lt;th&gt; : 열 제목 셀</li>
+            <li>&lt;caption&gt; : 표 제목</li>
+            <li>&lt;thead&gt; : 헤딩 셀 그룹</li>
+            <li>&lt;tfoot&gt; : 바닥 셀 그룹</li>
+            <li>&lt;tbody&gt; : 데이터 셀 그룹</li>
+        </ul>
+        <b>1. 테이블 만드는 방법</b>
+        <ol>
+            <li>&lt;table&gt;태그로 표 자리 만들기</li>
+            <li>&lt;tr&gt;태그로 행 만들기</li>
+            <li>&lt;tr&gt;태그 안에 &lt;td&gt;&lt;/td&gt;태그로 각 항목마다 셀 만들기</li>
+            <li>셀에 들어갈 내용은 &lt;td&gt;&lt;/td&gt;</li>
+        </ol>
+
+        <b>2. 행 또는 열 합치기</b><br>
+        행 합치기 : rowspan, 열 합치기 : colspan<br>
+        &lt;td&gt;, &lt;th&gt; 태그의 속성<br><br>
+
+        <b>3. 표에 제목 붙이기</b><br>
+        &lt;table&gt; 태그 바로 다음에 사용<br>
+        표의 위쪽 중앙에 표시<br><br>
+
+        <b>4. 표 구조 정의하기</b><br>
+        : 화면 낭독기를 통해 표의 구조를 쉽게 이해 가능<br>
+        &lt;thead&gt; : 제목, &lt;tbody&gt; : 본문, &lt;tfoot&gt; : 요약<br><br>
+
+        <b>5. 예제 ; </b><br>
+        <img width="300px" src="./image/1-8ffffff1.png">
+        <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. 표 제목 적기<br>
+                2. 행 생성<br>
+                3. 표 구조 정의 태그 (thead, tbody 등)<br>
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img width="600px" src="./image/1-8ex.png">
+            </div>
+        </div>
+
+        <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

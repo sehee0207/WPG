@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example_3-19</title>
+</head>
+
+<body>
+    
+    <h3>키 리스너와 키 이벤트 객체의 프로퍼티</h3>
+    <hr>
+    <p>텍스트 창에 키를 눌러보세요 Alt, Shift, Ctrl키도 가능합니다.</p><br>
+    <input type="text" id="text" onkeydown="whatKeyDown(event)">
+    <div id="div" style="background-color: skyblue; width: 250px; height: 50px"></div>
+
+    <script>
+    function whatKeyDown(e) {
+        var str="";
+        var div=document.getElementById("div");
+        div.innerHTML="";
+        if(e.altKey) {
+            str += "Alt 키가 눌러졌습니다.";
+            str += "<br>";
+        }
+        if(e.shiftKey) {
+            str += "Shift 키가 눌러졌습니다.";
+            str += "<br>";
+        }
+        if(e.ctrlKey) {
+            str += " Ctrl 키가 눌러졌습니다";
+            str += "<br>";
+        }
+            str += String.fromCharCode(e.keyCode) + "키가 눌려졌습니다."
+            div.innerHTML = str; 
+        }
+    </script>
+
+</body>
+</html>

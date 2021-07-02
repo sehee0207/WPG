@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example_3-17</title>
+    <script>
+        var p;
+        function init() {
+            p = document.getElementById("p");
+            p.addEventListener("mouseover", over);
+            p.addEventListener("mouseout", out);
+        }
+
+        function over() {
+            this.style.backgroundColor = "blue";
+        }
+        function out() {
+            this.style.backgroundColor="white";
+        }
+    </script>
+</head>
+<body onload = "init()">
+    <h3>addEventListener()를 이용한 리스너 등록</h3>
+    <hr>
+    <p id="p">마우스 올리면 blue 색으로 변경</p>
+</body>
+</html>

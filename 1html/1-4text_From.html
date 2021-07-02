@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 관련 서식</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+
+<body>
+    <h2 align="center"><div>[HTML]</div>텍스트 관련 서식</h2>
+    <hr>
+    <img width="300px" src="./image/1-4text1.png">
+    <div>
+        <p>
+            <b>1. 진하게</b><br>
+                글자를 진하게 (굵게) : &lt;b&gt;&lt;/b&gt; // 내용 강조 : &lt;strong&gt;&lt;/strong&gt;<br><br>
+
+            <b>2. 이탤릭</b><br>
+                이탤릭 : &lt;i&gt;&lt;/i&gt; // 이탤릭으로 강조 : &lt;em&gt;&lt;/em&gt; // 진하게 이탤릭으로 강조 : &lt;b&gt;&lt;em&gt;&lt;/b&gt;&lt;/em&gt;<br><br>
+
+            <b>3. 하이라이팅</b><br>
+                형광펜 효과 : &lt;mark&gt;&lt;/mark&gt;<br><br>
+
+            <b>4. 삭제, 추가</b><br>
+                삭제 : &lt;del&gt;&lt;/del&gt; // 추가 : &lt;ins&gt;&lt;/ins&gt;<br><br>
+
+            <b>5. 윗첨자, 아랫첨자</b><br>
+                윗 첨자 : &lt;sup&gt;&lt;/sup&gt; // 아랫첨자 : &lt;sub&gt;&lt;/sub&gt;<br><br>
+
+            <b>6. 인용문</b><br>
+                짧은 인용문 : q  ||  긴 인용문 : blockquote<br>
+                -> q 는 따옴표 표시, blockquote 는 따옴표 X<br><br>
+
+            <b>7. 예제 ;</b><br>
+            <img width="600px" src="./image/1-4text2.png">
+            <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. 따옴표 표시가 있는 인용문 태그<br>
+                2. 책/시 이름을 형광펜으로 강조<br>
+                3. 작가/지은이 이름을 굵게 (강조 X)<br>
+                4. 책/시 이름과 작가 이름에 들여쓰기가 되는 인용문 태그<br>
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img id="ex" width="600px" src="./image/1-4textex.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+
+        </p>
+    </div>
+</body>
+</html>

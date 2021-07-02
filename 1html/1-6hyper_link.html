@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼링크 태그</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2 align="center"><div>[HTML]</div>하이퍼링크 태그</h2>
+    <hr>
+    <p>
+        <b>1. 하이퍼링크(hyper-link)</b><br>
+        <ul>
+            <li>다른 문서로 점프할 수 있는 연결고리</li>
+            <li>텍스트나 이미지에 다른 웹 페이지의 주소</li>
+            <li>&lt;a&gt; 태그</li>
+
+        </ul>
+
+        1) href 속성 : Hypertext Reference<br>
+        ex. &lt;a href="http://www.google.com"&gt;구글로 가기&lt;/a&gt;,
+        &lt;a href="룰루랄라.html"&gt;룰루랄라보기&lt;/a&gt;<br><br>
+
+        2) target 속성 : 링크가 걸리는 위치 지정
+        <ul>
+            <li>target="_blank" : 새 창에서 열기</li>
+            <li>target="_self" : 현재 창에서 열기 (디폴트값)</li>
+        </ul>
+
+        3) id 속성 : 한 페이지 내에서 element 를 식별하기 위해 사용, 이름 중복 X<br>
+        현재 페이지 내의 해당 위치로 이동 가능<br>
+        <br>
+
+        <b>2. 예제 ; </b><br>
+        <img width="300px" src="./image/1-6ddd1.png"><br>
+        <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. a 태그의 href 속성으로 주소 넣어주기<br>
+                2. target 속성으로 새 창에서 열릴지 현재 창에서 열릴지 선택 <br>
+                (Q. 아무것도 하지 않으면?  |  A. 현재 창에서 열린다)
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img width="600px" src="./image/1-6ex.png"><br>
+            </div>
+        </div>
+        <br>
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

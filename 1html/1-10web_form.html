@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 폼</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2  align="center"><div>[HTML]</div>웹 폼</h2>
+    <hr>
+    <p>
+        : 웹 페이지에서 사용자의 정보를 입력 받는 요소, <br>
+        사용자가 입력한 내용을 서버로 보낼 때 사용<br><br>
+
+        <img width="500px" src="./image/1-10d1.png"><br>
+
+        <b>1. 작동 방식</b><br>
+        1) 웹 브라우저가 입력 요소가 포함된 웹 페이지 로드<br>
+        2) 사용자가 데이터 입력<br>
+        3) 사용자가 제출(submit) 버튼을 눌러 입력 양식을 웹 서버로 제출<br>
+        4) 웹 서버는 입력 양식을 처리, 응답 페이지를 생성해 사용자에게 전송 <br><br>
+
+        <b>2. &lt;form&gt;</b><br>
+        1) 웹 폼을 생성하는 태그,<br>
+        사용자가 웹 사이트로 정보를 보낼 수 있는 입력 요소를 담는 컨테이너 역할<br>
+        2) action : 폼 데이터를 처리할 웹 서버 응용 프로그램<br>
+        3) method : 데이터를 보내는 방법 (*GET, *POST)<br>
+        4) name : 폼의 이름 지정
+        
+        <blockquote><b>*GET</b><br>
+        웹 사이트에서 검색을 위한 방식, 글자수 최대 2048글자, <br>
+        URL주소뒤에 물음표와 쿼리 문자열을 붙여 전달, 비밀보장 X<br>
+        -> 사용 방법 &lt;form&gt;에 method="get" 속성 추가</blockquote>
+
+        <blockquote><b>*POST</b><br>
+        사용자가 입력한 데이터를 URL 주소 뒤에 붙이지 X, <br>
+        길이 제한 X, 보안 유지 가능, 입력 전송에 사용 <br>
+        -> 사용 방법 &lt;form&gt;에 method="post" 속성 추가</blockquote>
+
+        <b>3. 폼 요소</b><br>
+        : 폼을 만드는 다양한 태그, 종류가 매우 다양<br>
+        <ul>
+            <li>value : 입력 요소의 초기값</li>
+            <li>name : 입력요소의 이름, 데이터 전송 시 데이터의 식별자로 사용</li>
+        </ul>
+        
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소(1)</title>
+    <link rel="stylesheet" href="./hee.css">
+</head>
+<body>
+    <h2  align="center"><div>[HTML]</div>폼 요소(1)</h2>
+    <hr>
+    <p>
+        <b>1. 텍스트 입력</b><br>
+        1) type="text" : 사용자가 입력 할 수 있는 한 줄 짜리 입력 필드<br>
+        2) type="password" : 입력한 글자가 보이지 않음<br>
+        3) &lt;textarea&gt; : 여러 줄 텍스트 입력 필드, cols 열 개수, rows 행 개수<br><br>
+
+        <b>2. 데이터 목록</b><br>
+        &lt;datalist&gt; : 목록 리스트를 작성하는 태그<br><br>
+
+        <b>3. 버튼</b><br>
+        1) &lt;input type="button / reset / submit / image / file" value="버튼의 문자열"&gt;<br>
+        2) &lt;button type="buttom / reset / submit"&gt;버튼의 문자열&lt;/button&gt;<br>
+        -> 버튼을 만드는 방법은 두 가지, 결과적으로는 같은 버튼이 만들어짐<br>
+        * 예시는 모두 첫 번째 방법을 사용 할 예정<br><br>
+
+        <b>4. 선택형 버튼</b><br>
+        1) 라디오 버튼 &lt;input type="radio"&gt;<br>
+        : 여러 항목 중 하나만 선택, name 및 value 속성 반드시 지정<br>
+        *name 이 같아야 동일한 그룹으로 취급 됨 *<br><br>
+
+        2) 체크박스 &lt;input type="checkbox"&gt;<br>
+        : 여러 개의 항목을 동시에 선택<br>
+        미리 체크해놓고 싶으으면 checked 속성 지정<br><br>
+
+        3) 콤보박스 &lt;select&gt; &lt;/select&gt;<br>
+        : 드롭 다운 리스트에 목록을 출력해 선택하는 입력 방식<br><br>
+
+        <b>5. 예제 ; </b><br>
+        <img width="300px" src="./image/1-11ffffffff1.png">
+        <div class="ex">
+            <div id="text">
+                <i>- 구현 할 것</i><br><br>
+                1. 필요한 폼 태그 맞춰 쓰기<br>
+                2. textarea <br>
+                3. 라디오 버튼<br>
+                4. 체크 박스<br>
+                5. select 와 option 을 통해 콤보박스<br>
+            </div>
+            <br>
+            <div id="pic">
+                <i>- 예시 코드</i><br><br>
+                <img width="500px" src="./image/1-11ex.png">
+            </div>
+        </div>
+        <br>
+        <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+    </p>
+</body>
+</html>

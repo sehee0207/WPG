@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>코어 객체</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>코어 객체</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 코어 객체</b><br>
+                <ul>
+                    <li>코어 객체 종류 </li>
+                    <ul>
+                        <li>Array, Date, String, Math 등</li>
+                    </ul>
+                    <li>코어 객체 생성</li>
+                    <ul>
+                        <li>new 키워드 이용</li>
+                        EX) 
+                        <pre>
+    var today = new Date(); // 시간 정보를 다루는 Date 타입의 객체 생성
+    var msg = new String("Hello"); // "Hello"문자열을 담은 String 타입의 객체 생성
+                        </pre>
+                        +) 이때 today, msg 는 생성된 객체를 가리키는 레퍼런스 변수(대부분 객체라고 불림)
+                        <li>객체가 생성되면 객체 내부에 여러 프로퍼티와 메소드들이 존재</li>
+                    </ul>
+                    <li>객체 접근</li>
+                    <ul>
+                        <li>객체와 멤버 사이에 점(.) 연산자 이용</li>
+                        EX) obj.프로퍼티 = 값; // 객체 obj의 프로퍼티 값 변경 <br>
+                        변수 = obj.프로퍼티; // 객체 obj의 프로퍼티 값을 변수에 저장하기 <br>
+                        obj.메소드(매개변수); // 객체 obj의 메소드 호출하기
+                    </ul>
+                </ul>
+
+            <b>2. 예제 ; 코어 객체 사용해보기</b><br>
+            <img src="./image/3-10ss.png">
+            <div id="text">
+                - 현재 시간 불러오기<br>
+                - 배열에 할 일을 적고 문자열 길이를 알려주는 코어 객체를 사용해 길이 출력하기<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="400px" src="./image/3-10ex.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

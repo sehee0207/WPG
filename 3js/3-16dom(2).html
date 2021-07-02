@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>dom 객체(2)</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>dom 객체(2)</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. HTML 태그의 요소</b><br>
+            <ul>
+                <li>HTML 태그(Element라고도 불림)</li>
+                <ul>
+                    <li>엘리먼트 이름(태그 이름)</li>
+                    <li>속성(프로퍼티)</li>
+                    <li>CSS3 스타일</li>
+                    <li>이벤트 리스너</li>
+                    <li>콘텐츠(innerHTML)</li>
+                </ul>
+            </ul>
+
+            <b>2. DOM 객체의 구성 요소</b><br>
+            : DOM 객체는 5개의 요소로 구성(HTML 태그의 구성요소를 그대로 반영)
+            <ul>
+                <li>프로퍼티(property)</li>
+                <ul>
+                    <li>DOM객체의 멤버 변수로서, HTML 태그의 속성 반영</li>
+                    <li>DOM 객체의 프로퍼티 값으로부터 HTML 태그의 속성을 알아내거나, 변화를 줄 수 있음.</li>
+                </ul>
+                <li>메소드(method)</li>
+                <ul>
+                    <li>DOM 객체의 멤버 함수로서, HTML 태그 제어에 활용</li>
+                </ul>
+                <li>컬렉션(collection)</li>
+                <ul>
+                    <li>정보를 집합적으로 표현하는 일종의 배열</li>
+                    <li>예) children 컬렉션 : 모든 자식 DOM 객체들의 주소를 가짐</li>
+                </ul>
+                <li>이벤트 리스너(event listener)</li>
+                <ul>
+                    <li>HTML 태그에 작성된 이벤트 리스너 반영</li>
+                </ul>
+                <li>CSS3 스타일(style)</li>
+                <ul>
+                    <li>HTML 태그에 설정된 CSS3 스타일 시트 정보를 반영</li>
+                    <li>DOM 객체의 style 프로퍼티를 통해 HTML 태그의 모양 제어 가능</li>
+                </ul>
+            </ul>
+            
+            <b>3. DOM 객체의 주요 프로퍼티</b><br>
+            <ul>
+                <li>기본</li>
+                <ul>
+                    <li>id</li>
+                    <ul>
+                        <li>태그의 id 속성 값</li>
+                    </ul>
+                    <li>lang</li>
+                    <ul>
+                        <li> 태그의 lang 속성 값</li>
+                    </ul>
+                    <li>style</li>
+                    <ul>
+                        <li>style 객체에 대한 레퍼런스</li>
+                    </ul>
+                    <li>title</li>
+                    <ul>
+                        <li>태그의 title 속성 값</li>
+                    </ul>
+                    <li>tagName</li>
+                    <ul>
+                        <li>태그 이름 문자열(항상 대문자로 표시)</li>
+                    </ul>
+                    <li>innerHTML</li>
+                    <ul>
+                        <li>시작태그와 종료태그 사이에 HTML</li>
+                    </ul>
+                </ul>
+                <li>DOM 트리 관련</li>
+                <ul>
+                    <li>childElementCount</li>
+                    <ul>
+                        <li>자식 DOM 객체 개수</li>
+                    </ul>
+                    <li>firstElementChild</li>
+                    <ul>
+                        <li>첫번째 자식 객체</li>
+                    </ul>
+                    <li>lastElementChild</li>
+                    <ul>
+                        <li>마지막 자식 객체 </li>
+                    </ul>
+                    <li>nextElementSibling</li>
+                    <ul>
+                        <li>다음 형태(오른쪽) 객체</li>
+                    </ul>
+                    <li>parentElement</li>
+                    <ul>
+                        <li>부모 객체</li>
+                    </ul>
+                    <li>previousElementSibling</li>
+                    <ul>
+                        <li>이전 형태(완쪽) 객체</li>
+                    </ul>
+                </ul>
+                <li>크기와 위치</li>
+                <ul>
+                    <li>offsetHeight</li>
+                    <ul>
+                        <li>패딩, 테두리, 스크롤바를 포함한 높이</li>
+                    </ul>
+                    <li>offsetWidth</li>
+                    <ul>
+                        <li>패딩, 테두리, 스크롤바를 포함한 폭</li>
+                    </ul>
+                    <li>offsetLeft</li>
+                    <ul>
+                        <li>객체의 출력 위치. 수평 옵셋</li>
+                    </ul>
+                    <li>offsetTop</li>
+                    <ul>
+                        <li>객체의 출력 위치. 수직 옵셋</li>
+                    </ul>
+                </ul>
+                <li>컬렉션</li>
+                <ul>
+                    <li>children</li>
+                    <ul>
+                        <li>자식 DOM객체들이 컬렉션 ( 자식들을 가리키는 레퍼런스 배열)</li>
+                    --> 직계 자식들의 컬렉션
+                    </ul>
+                </ul>
+            </ul>
+
+            <b>4. DOM 객체의 주요 메소드</b><br>
+            <ul>
+                <li>addEventListener()</li>
+                <ul>
+                    <li>새로운 이벤트 리스너 등록</li>
+                </ul>
+                <li>removeEventListener()</li>
+                <ul>
+                    <li>addEventListener()로 등록한 이벤트 리스너 제거</li>
+                </ul>
+                <li>click()</li>
+                <ul>
+                    <li>사용자가 마우스를 클릭한 것과 동일한 작업 수행</li>
+                </ul>
+                <li>focus()</li>
+                <ul>
+                    <li>키 입력을 받을 수 있도록 이 객체에 포커스 지정</li>
+                </ul>
+                <li>setAttribute()</li>
+                <ul>
+                    <li>속성 추가</li>
+                </ul>
+                <li>insertBefore()</li>
+                <ul>
+                    <li>지정된 자식 앞에 새 자식 추가</li>
+                </ul>
+                <li>removeChild()</li>
+                <ul>
+                    <li>자식 삭제</li>
+                </ul>
+                <li>replaceChild()</li>
+                <ul>
+                    <li>자식 대체</li>
+                </ul>
+                <li>appendChild()</li>
+                <ul>
+                    <li>마지막 자식 뒤에 새로운 자식 추가</li>
+                </ul>
+            </ul>
+            <b>5. DOM 객체 다루기</b><br>
+            <ul>
+                <li>DOM 객체의 CSS3 스타일 동적 변경</li>
+                <ul>
+                    <li>DOM 객체의 style 프로퍼티로 접근</li>
+                    EX) ul.<mark>style</mark>.color = "red";
+                    <li>CSS4 style 프로퍼티 사용 방법 : 하이픈 기호 제외하고 하이픈 뒷글자를 대문자로</li>
+                    : background-color 스타일 프로퍼티 -> backgroundColor <br>
+                    : font-size 스타일 프로퍼티 -> fontSize
+                </ul>
+            </ul>
+            <b>6. innerHTML 프로퍼티</b><br>
+            <ul>
+                <li>시작 태그와 종료 태그 사이에 들어 있는 HTML 콘텐츠</li>
+                <pre> &lt;p id = "firstP" style = "color:blue"&gt; 
+<mark> 여기를 &lt;span style="color:red"&gt; 클릭하세요&lt;/span&gt;</mark><- innerHTML
+ &lt;/p&gt; </pre>                
+                 <li>innerHTML 프로퍼티 수정 -> HTML 태그의 콘텐츠 변경</li>
+                <pre> var p = document.getElementById("firstP");
+p.innerHTML = "나의 &lt;img src='cat.jpg'> 고양이"; <br> <hr> 
+&lt;p id = "firstP" style = "color:blue"&gt; 
+나의 &lt;img src = 'cat.jpg'&gt; 고양이 
+&lt;/p&gt;
+                </pre>
+            </ul>
+            <b>7. this</b><br>
+            <ul>
+                this 키워드 <br>
+                <ul>
+                    <li>DOM 객체에서 객체 자신을 가리키는 용도로 사용</li>
+                    <ul>
+                        <li>예) div 태그 자신의 배경색을 오렌지 색으로 변경</li>
+                        -EX) <pre>&lt;div onclick = "this.style.backgroundColor='orange'"&gt;</pre>
+                        <li>예) 버튼이 클릭되면 자신의 배경색을 오렌지색으로 변경</li>
+                        -EX) <pre> &lt;button onclick="this.style.backgroundColor='orange'"&gt;</pre>
+                    </ul>
+                </ul>
+            </ul>
+            <b>8. 문서의 동적 구성</b><br>
+            <ol>
+                <li>DOM 객체 동적 생성 : document.createElement("태그 이름")</li>
+                <ul>
+                    <li>새로운 DOM 객체 생성 (태그, 속성 부여)</li>
+                    EX)<pre>
+    var newDIV = document.createElement("div");
+    newDIV.innerHTML = "새로 생성된 DIV입니다";
+    newDIV.setAttribute("id", "myDiv"); // 속성 추가
+    newDIV.style.backgroundColor = "yellow";
+                    </pre>
+                    <hr>
+                --> 위 코드와 같음 <br>
+                    <pre> &lt;div id = "myDiv" style = "background-color:yellow"&gt; <br>  새로 생성된 DIV 입니다. &lt;/div&gt;<br>
+                </pre>
+                </ul>
+                <li>DOM 트리에 추가 : 부모.appendChild(DOM객체);</li>
+                <ul>
+                    <li>예) 새로 생성한 div 객체를 &lt;p id = "p"&gt; 태그의 마지막 자식을 추가</li>
+                    EX) <pre> var p = document.getElementById("p"); // 아이디가 p인 DOM 객체 찾기</pre>
+                    p.appendChild(newDIV); // 객체 p의 마지막자식으로 newDIV 추가
+
+                </ul>
+                
+                <li>DOM 객체의 삭제 : 부모.removeChild(삭제하고자하는 자식 객체);</li>
+                EX)<pre>
+        var myDiv = document.getElementById("myDiv"); //자식 DOM 객체 찾기
+        var parent = myDic.parentElement; // 부모 DOM 객체 찾기
+
+        parent.removeChild(myDiv); // 부모 객체에서 myDiv 객체 삭제 및 반환
+                </pre>
+
+            </ol>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

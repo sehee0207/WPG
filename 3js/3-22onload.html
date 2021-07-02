@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>onload</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>onload</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. onload </b><br>
+            <ul>
+                <li>웹 페이지의 로딩이 완료되면 window 객체에 load 이벤트 발생</li>
+                <li>onload 리스너 작성 방법</li>
+                <ol>
+                    <li>window.onload = function(){ alert('onload'); };</li>
+                    <li>&lt;body onload = "alert('onload');" &gt;</li>
+                </ol>
+                -> 이 둘은 같은 표현 (&lt;body&gt;에 onload 리스너를 만드는 것은 사실상 window.onload를 이용하는 것과 동일함)
+            </ul>
+            
+            <b>2. 이미지의 로딩 완료와 onload</b><br>
+            <ul>
+                <li>이미지가 출력되는 과정  </li>
+                ->이미지가 파일로부터 로딩하는 과정 + 이미지 출력 되는 과정
+                <li>이미지가 로딩되기 전에는 이미지의 크기, 비트맵 등을 알 수 없음</li>
+            </ul>
+
+            <b>3. Image 객체</b><br>
+            <ul>
+                <li>Image 객체</li>
+                <ul>
+                    <li>&lt;img&gt; 태그에 의해 생성되는 DOM 객체</li>
+                    <li>자바스크립트로 이미지를 다룰 수 있게 함</li>
+                    <li>Image 객체의 프로퍼티</li>
+                    <ul>
+                        <li>src : 이미지 주소</li>
+                        <li>width : 이미지 폭</li>
+                        <li>height : 이미지 높이</li>
+                        <li>complete : 이미지의 로딩 완료 여부 (true/false)</li>
+                    </ul>
+                </ul>
+                <li>img 태그의 이미지 바꾸기</li> <br>
+                HTML<pre>&lt;img id="myImg" src="apple.png"&gt;</pre>
+                ⬇ <br><br>
+                JavaScript
+                <pre>var myImg = document.getElementById("myImg"); <br>myImg.src = "banana.png";
+                </pre>
+            </ul>
+
+            <b>4. 이미지 로딩시 주의할 점</b><br>
+            <ul>
+                <li>코드 수정하기 예시</li>
+                ->이미지 로딩이 완료된 후에 width 값 사용하기 -> onload 리스너 사용
+            </ul>
+            <pre>
+            var myImg = document.getElementById("myImg");
+
+            myImg.onload = function(){
+                var width = myImg.width;
+                var height = myImg.height;
+                alert("이미지 크기 = " + width + " x " + height);
+            }
+                
+            myImg.src = "banana.png"; // 이미지 로딩 완료 시 실행
+            </pre>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

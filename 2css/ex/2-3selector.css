@@ -1,0 +1,7 @@
+a:link{ color:black; }
+a:visited{ color:red; }
+a:hover{background-color: pink; color:blue;}
+a:active{ color:green; }
+input:focus{
+
+background-color:black; color:white; }

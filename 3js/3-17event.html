@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>이벤트</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>이벤트</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 이벤트 개요 </b><br>
+               <ul>
+                   <li>이벤트</li>
+                   <ul>
+                       <li>사용자의 입력 행위나 문서나 브라우저의 상태 변화를 자바스크립트 코드에게 알리는 통지</li>
+                   </ul>
+                   <li>이벤트 종류</li>
+                   <ul>
+                       <li>마우스/키보드/HTML 프레임/HTML 입력양식/유저인터페이스/구조변화/터치 이벤트 등등 ... </li>
+                   </ul>
+                   <li>용어 정리</li>
+                   &lt;p onclick="f()"&gt; 마우스 클릭시 f 함수 실행&lt;/p&gt;
+                   <ul>
+                       <li>click : 이벤트 이름, 이벤트 타입</li>
+                       <li>onclick : 이벤트 속성 (특정 요소에 이벤트를 직접 연결할 때 활용)</li>
+                       <li>f() : 이벤트 리스너, 이벤트 핸들러(이벤트 속성에 할당한 함수)</li>
+                   </ul>
+               </ul>
+
+
+            <b>2. 이벤트 리스너 만들기</b><br>
+            <ol>
+                <li>HTML 태그 내에 작성</li>
+                <ul>
+                    <li>HTML 태그 내의 이벤트 리스너 속성에 이벤트 리스너 직접 작성</li>
+                </ul>
+                <li>DOM 객체의 이벤트 리스너 프로퍼티에 작성</li>
+                <ul>
+                    <li>DOM 객체의 이벤트 리스너 프로퍼티에 이벤트 리스너 코드 작성</li>
+                </ul>
+                <li>DOM 객체의 addEventListener() 메소드 이용</li>
+                <ul>
+                    <li>addEventListener() 메소드</li>
+                    addEventListener(eventName, listener[, useCapture]) <br>
+                    eventName : 이벤트 타입을 나타내는 문자열 (click, load, keydown) <br>
+                    listener : 이벤트 리스너로 등록할 함수 이름 <br>
+                    useCapture : true이면 이벤트 흐름 중 캡쳐 단계에서 실행될 리스너 등록. false이면 버블 단계에서 실행될 리스너 등록. 생략 가능하며 디폴트는 false.<br>
+                    <li>동일한 이벤트 리스너에 여러 함수를 중복하여 등록할 수 있다</li>
+                    <li>리스너들은 등록된 순서대로 호출됨</li>
+                </ul>
+            </ol>
+
+            <b>3. 이벤트 리스너 작성 방법 3가지 비교</b><br>
+            <ul>
+                <li>HTML 태그</li>
+                &lt;p id ="p" onmouseover=" this.style.backgroundColor='orchid' "&gt;<br> 마우스 올리면 orchid 색으로 변경 &lt;/p&gt;
+                <li>이벤트 리스너 프로퍼티</li>
+                function over(){<br>
+                    p.style.backgroundColor="orchid"; <br>
+                } <br>
+                p.onmouseover = over;
+                <li>addEventListener() 메소드 이용</li>
+                p.addEventListener("mouseover", over);
+            </ul>
+
+            <b>4. 예제 ; </b><br>
+            <img width="300px" src="./image/3-17ss.png">
+            <div id="text">
+                - 마우스를 올렸을 때 div 의 색을 파란색으로 바꾸기 <br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img ex="300px" src="./image/3-17ex.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html> 

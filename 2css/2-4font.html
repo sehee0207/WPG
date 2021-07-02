@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폰트 스타일</title>
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>폰트 스타일</h2>
+    <hr>
+
+    <b>1. 폰트(font)</b><br>
+    : CSS3의 폰트와 모양
+        <ul>
+            <li>폰트는 페이지의 디자인에 절대적인 영향을 줌</li>
+            <li>폰트 종류, 크기, 색상, 장식 등 설정 가능</li>
+            <li>Serif 형 (Serif 있는 서체)</li>
+            <li>Sans-Serif 형 (Serif 없는 서체)</li>
+            <li>Monospace 형 (글자 폭 동일)</li>
+        </ul>
+
+    <b>2. font-fmaily : 폰트 종류</b><br>
+            <pre>font-family : Arial,       "Times New Roman"    ,     Serif
+    ((콤마로 연결))    Arial 폰트가 없는 경우 ↲   Times New Roman 폰트도 없는 경우 ↲
+            </pre>
+            <ul>
+                <li>여러 개의 폰트 종류 제공하는 것이 좋음<br>
+                    (클라이언트 컴퓨터에 지정된 폰트가 없을 수도 있기 때문)</li>
+                <li>브라우저는 첫 번째 폰트가 없으면, 그 다음 폰트를 시도</li>
+                <li>폰트 이름이 여러 단어로 구성되어 있다면 큰따옴표("")로 묶어서 표시</li>
+            </ul>
+            <br>
+
+            <b>- web 폰트</b><br>
+            구글 웹 폰트 사용하기 : <a href="https://fonts.google.com/?authuser=1">구글 웹 폰트 사이트</a><br>
+                
+                    <img width="300px" src="./image/2-4wf1.png"><br>
+                    1) 마음에 드는 폰트 선택해 +select this style 누르기 (오른쪽 하단)</li><br>
+                    <img width="200px" src="./image/2-4wf2.png"><br>
+                    2) 해당 웹 폰트를 사용할 HTML 파일에서 &lt;head&gt;내부에 &lt;link&gt;태그 복사해 넣기<br>
+                    3) 'CSS rules to specify families' 안에 있는 코드 복사해 CSS 파일에 붙여넣기<br>
+                
+            <br>
+
+            <b>3. font-size : 폰트 크기</b><br>
+                <b>- 단위</b><br>
+                <ul>
+                    <li>px</li>
+                    <li>상수 -> xx-small, x-small, small, medium, large, x-large, xx-large</li>
+                    <li>em(부모 요소에 상대적크기) -> 1em==16px==100%</li>
+                    <li>pt, % ...</li>
+                </ul>
+             <br>
+
+            <b>4. font-weight, font-style : 폰트 굵기, 이텔릭체 스타일 여부</b><br>
+                <ul>
+                    <li>font-weight -> 100~900 // normal(400), bold(700), bolder, lighter(상위요소보다)</li>
+                    <li>font-style -> normal, italic</li>
+                </ul>
+            <br>
+
+            <b>5. font : 폰트 축약</b><br>
+            <b>- 폰트 속성 나열 순서</b>
+                <ul>
+                    <li>
+                        { font : font-style, font-weight, font-size, font-family }
+                        <li>필수 속성 -> font-size, font-family // 나머지 생략 가능</li>
+                    </li>
+                </ul>
+                <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+            
+
+</body>
+</html>

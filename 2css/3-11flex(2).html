@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>flex(2)</title>
+    <link rel="stylesheet" href="./hs.css">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>flex(2)</h2>
+    <hr>
+    <b>1. Flex item의 속성</b><br>
+    
+    <b>1) flex-grow : 플렉스 항목의 증가 너비 비율 설정</b><br>
+    <br>
+    
+    <b>2) flex-shrink: 플렉스 항목의 감소 너비 비율 설정</b><br>
+    <ul>
+        <li> 플렉스 컨테이너의 크기가 항목보다 줄어들 때 flex-basis값을 가지고 있는 플렉스 항목의 너비를 줄이기 </li>
+        <li> 속성 값 : 줄일 비율 (0: 줄이지 않음) </li>
+    </ul>
+    
+    <b>3) flex-basis : 플렉스 항목의 주축 방향의 기본 너비 지정</b><br>
+    <br>
+
+    <b>4) flex(위 3개 속성 축약형) : flex-grow, flex-shrink, flex-basis 한번에 지정</b><br>
+    { flex : flex-grow flex-shrink flex-basis; } 순서로 <br><br>
+
+    <b>5) align-slef : 개별 플렉스 항목 별로 교차축 기준의 배치 방법 지정(개별적으로 지정)</b><br>
+    -> 플렉스 항목 전체의 배치방법을 결정하는 컨테이너의 속성인 align-itmes 속성보다 우선순위가 높음<br>
+    <ul>
+        <li>auto : 플렉스 컨테이너의 align-itmes 속성을 상속받음 (기본값)</li>
+        <li>stretch : 플렉스 항목을 확장하여 교차축 전체를 채움 (기본값)</li>
+        <li>flex-start : 플렉스 항목을 교차축의 시작점을 기준으로 배치</li>
+        <li>flex-end : 플렉스 항목을 교차축의 끝점을 기준으로 배치</li>
+        <li>center : 플렉스 항목을 교차축의 중앙을 기준으로 배치</li>
+    </ul>
+
+    <b>6) order : 플렉스 항목의 배치 순서 설정하기</b><br>
+    <ul> 
+        <li>기본값 : 0</li>
+        <li>숫자가 클 수록 순서가 뒤로 밀림</li>
+    </ul>
+
+    <b>2. flex 연습 게임</b><br>
+        <a href="https://flexboxfroggy.com/#ko">flex 연습하기</a>
+    <br><br>    
+    
+    <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+</body>
+</html>

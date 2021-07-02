@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>선택자(selector)</title>
+    <link rel="stylesheet" href="./hs.css">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>선택자(selector)</h2>
+    <hr>
+    <div>
+        <p>
+            : 스타일을 지정할 HTML 요소를 선택하는 부분<br>
+            <img width="300px" src="./image/2-3sel.png"><br><br>
+
+            <b>1. 타입 선택자 (type selector)</b><br>
+            <ul>
+                <li> 태그 이름 {속성 : 값; 속성: 값;}.</li>
+                <li>HTML 요소(태그) 이름을 사용</li>
+            </ul>
+
+            <b>2. 아이디 선택자 (id selector)</b><br>
+            <ul>
+                <li>#id값 { 속성 : 값; 속성:값;}</li>
+                <li>id로 지정된 특정한 요소를 선택</li>
+            </ul>
+
+            <b>3. 클래스 선택자(class selector)</b><br>
+                <ul>
+                    <li> . 클래스명 {속성 : 값; 속성: 값;}.</li>
+                    <li>클래스가 부여된 요소를 선택</li>
+                    <li>여러 개의 요소를 하나의 클래스로 묶어서 스타일을 지정하려고 할 때 사용</li>
+                </ul>
+
+                - id, class, name 비교<br>
+
+                <table border="1px">
+                    <tr>
+                        <th>id</th>
+                        <th>class</th>
+                        <th>name</th>
+                    </tr>
+                    
+                    <tr>
+                        <td align="center">하나의 요소만 가능(페이지 유일)</td>
+                        <td align="center">여러 요소 적용 가능</td>
+                        <td align="center">여러 요소 적용 가능</td>
+                    </tr>
+
+                    <tr>
+                        <td align="center">CSS에서 식별자로 사용 가능</td>
+                        <td align="center">CSS에서 식별자로 사용 가능</td>
+                        <td align="center">CSS에서 사용 불가</td>
+                    </tr>
+                    <tr>
+                        <td align="center">-</td>
+                        <td align="center">-</td>
+                        <td> &lt;form&gt; submit 전송시 사용 가능</td>
+                    </tr>
+                </table>
+    
+                <br> - 스타일 충돌 시<br>
+                <ol>
+                    <li>스타일 적용 범위가 좁을 수록 우선순위가 높음
+                        <li>태그 스타일</li>
+                        <li>클래스 스타일</li>
+                        <li>id 스타일</li>
+                    </li>
+                    -> 스타일 적용범위가 같다면, 소스코드가 아래에 있을수록 우선순위가 높음<br>
+                    -> 모든 우선순위를 뛰어넘을 수 있는 방법 : !important (<u>비추</u>)
+                </ol>
+                
+                - 선택자 그룹<br>
+                   : 선택자를 콤마(,)로 분리하여 나열 할 수 있다.<br>
+                <br>
+                <b>4. 자식 선택자(child), 자손 선택자(descendent)</b><br>
+                        <table border="1px">
+                            <tr>
+                                <th>선택자</th>
+                                <th>예시</th>
+                                <th>설명</th>
+                            </tr>
+                            
+                            <tr>
+                                <td>자식 선택자</td>
+                                <td>s1>s2</td>
+                                <td align="center">s1 요소의 직계 자식 요소인 s2를 선택한다.(부모자식 관계)</td>
+                            </tr>
+        
+                            <tr>
+                                <td>자손 선택자</td>
+                                <td align="center">s1 s2</td>
+                                <td align="center">s1 요소의 포함된 s2 요소를 선택한다.(조상자손 관계)</td>
+                            </tr>
+                        </table>
+                        <ul>
+                            <li>body > p  {color: blue;}    /*body의 직계자식 p 요소 */</li>
+                            <li>body   p  {color: red;}    /*body 안의 자손 p 요소 */</li>
+                        </ul>
+                    
+                <b>5. 전체 선택자(universal selector)</b><br>
+                        <ul>
+                            <li> * { 속성:값; 속성: 값; }</li>
+                            <li> 페이지 안의 모든 요소를 선택</li>
+                            <li>주로 모든 요소에 공통적인 속성을 지정할 때 사용</li>
+                        </ul>
+
+                <b>6. 속성 선택자(attribute selector)</b><br>
+                                <ul>
+                                    <li>[속성명="속성값"] {속성 : 값; 속성 : 값;}</li>
+                                    <li>특정한 속성(또는 그 값)을 가지는 요소를 선택</li>
+                                    <li>대괄호[] 사용</li>
+                                        - h1[title] {color : blue;}   /*h1태그 중 title속성을 사용하는 요소*/</li><br>
+                                        - p[class= "example"] {color: blue;} /*p태그 중 class속성의 값이 example인 요소*/</li>
+                                    </li>
+                                </ul>
+                <b>7. 가상클래스 선택자(pseudo-class selector)</b><br>
+                                <ul>
+                                    <li>클래스가 정의(선언)된 것 처럼 간주</li>
+                                    <li>콜론( : ) 사용</li>
+                                    <li>:link, :visited, :hover, :active, :focus 등등 40개 이상 존재</li>
+                                </ul>
+                
+                <b>8. 예제 ; 가상클래스 - :link, :visited, :hover, :active</b><br>
+                <img width="300px" src="./image/2-3se2.png">
+
+                <div id="text">
+                    - :link, :visited, :hover, :active 각각 색 바꾸기<br>
+                </div>
+                <br>
+                <div id="pic">
+                    예시 코드<br><br>
+                    <img width="400px" src="./image/2-3se3.png">
+                </div>
+                <br>
+
+                <b>9. 선택자 연습 게임</b><br>
+                <a href="http://flukeout.github.io/">선택자 연습하기</a>
+                
+                <br><br>
+
+               <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>

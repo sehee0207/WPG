@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>변수</title>
+    <link rel="stylesheet" href="./bin.css">
+</head>
+<body>
+    <h2 align = "center"><div id="bin">[JavaScript]</div>변수</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 식별자</b><br>
+            <ul>
+                <li>자바스크립트 프로그램의 변수, 상수, 함수에 붙이는 이름</li>
+                <li>식별자 만드는 규칙</li>
+                <ul>
+                    <li>첫 번째 문자 : 알파벳, 언더스코어(_),$만 사용 가능 <mark>숫자 사용 불가</mark> </li>
+                    <li>대소문자는 구분되어 다루어짐</li>
+                    <p>      -myHome과 Myhome은 다른 식별자</p>
+                    <li>자바스크립트 예약어는 사용 불가</li>
+                    <p>      -false, for, if, null 등 자바스크립트 예약어 사용불가</p>
+                </ul>
+            </ul>
+
+            <b>2. 문장</b><br>
+            <ul>
+                <li>자바스크립트 프로그램의 기본 단위는 문장 </li>
+                <li>문장과 문장을 구분하기 위해 세미콜론(;) 사용</li>
+                <li>주석문</li>
+                // 해당 문장만 주석 처리를 해줌<br>
+                /*원하는 지점부터 지정한 끝 지점까지 주석 처리를 해줌*/<br>
+            </ul>
+
+            <b>3. 변수</b><br>
+            <ul>
+                <li>변수 선언 : var 변수명 = 초기값; // 초기값은 생력 가능(undefined)</li>
+                <li>리터럴에 따라 데이터 타입이 동적으로 결정됨</li>
+            </ul>                
+            
+            <b>4. 데이터 타입</b><br>
+            <ul>
+                <li>기본 타임 (5가지) </li>
+                <ul>
+                    <li>숫자(Number) 타입</li>
+                    -정수, 실수 구분 없음, C언어에서 실수와 유사
+                    <li>문자열(String) 타입</li>
+                    -' ' 또는 " "로 생성<br>
+                    -문자 배열처럼 인덱스로 접근 가능<br>
+                    -한 번 정의된 문자열은 변하지 않음(읽기만 가능)
+                    <li>논리(Boolean) 타입</li>
+                    - 참 거짓
+                    <li>null</li>
+                    - 값이 비어있음
+                    <li>undefined</li>
+                    - 값이 할당되지 않음
+                </ul>
+            </ul>
+
+            <b>5. 자바스크립트의 식과 연산</b><br>
+            <ul>
+                <li>산술 연산자</li>
+                <ul>
+                    <li>5가지 : +, -, *, /, %</li>
+                    <li>나누기 연산 결과는 실수</li>
+                </ul>
+                <li>증감 연산자</li>
+                <ul>
+                    <li>전위 연산자 : ++a</li>
+                    <li>후위 연산자 : a++</li>
+                </ul>
+                <li>대입 연산자</li>
+                <ul>
+                    <li>오른쪽 식의 결과를 왼쪽 변수에 대입</li>
+                    <li>대입 연산자 종류 : =, +=, -=, *=, /=, %=</li>
+                </ul>
+                <li>비교 연산자</li>
+                <ul>
+                    <li>두 값 비교, true나 false의 결과를 내는 연산</li>
+                    <li>비교 연산자 종류 : <, >, <=, >=, ==, !=</li>
+                </ul>
+                <li>논리 연산자</li>
+                <ul>
+                    <li>논리 연산 : AND, OR, NOT</li>
+                    <li>논리 연산자 종류 : &&, ||, !</li>
+                </ul>
+                <li>삼항 조건 연산자</li>
+                <ul>
+                    <li>조건 ? 식1 : 식2</li>
+                    <li>조건이 true면 전체 결과는 식1의 계산 값, 조건이 false이면 식2의 계산 값</li>
+                </ul>
+                <li>문자열 연산자</li>
+                <ul>
+                    <li>문자열 연결 : +</li>
+                    <li>순서에 유의</li>
+                </ul>
+            </ul>
+
+            <b>6. 예제 ; 표준 체중 계산기</b><br>
+            <div id="text">
+                - 이름, 키, 몸무게를 차례대로 입력 받기<br>
+                - 표준 체중 = 키 - 5 <= { (키 - 100) * 0.9 } <= 키 + 5<br>
+                - 표준 체중인지 아닌지 확인 창 띄우기<br>
+            </div>
+            <br>
+            <div id="pic">
+                예시 코드<br>
+                <img width="400px" src="./image/3-4ex.png">
+            </div>
+            <br>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>

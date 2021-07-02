@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃</title>
+    <link rel="stylesheet" href="./hs.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>레이아웃</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. 레이아웃</b><br>
+            <ul>
+                <li>웹 페이지에서 HTML 요소의 위치, 크기 등을 결정하는 것</li>
+                <li>집안에서의 가구 배치와 비슷함</li>
+            </ul>
+           
+            <b>2. float 속성</b><br>
+            <ul>
+                <li>left : 해당 요소를 문서의 왼쪽으로 배치</li>
+                <li>right : 해당 요소를 문서의 오른쪽으로 배치</li>
+                <li>none : 좌우 어느 쪽ㅈ으로도 배치하지 않음</li>
+            </ul>
+            
+            <b>3. clear 속성</b><br>
+            -> float 속성을 중단 할 때 사용 <br><br>
+            
+            <b>4. z-index</b><br>
+            -> z 축을 따라 수직으로 쌓는 순서 지정<br>
+            숫자 값이 클수록 위에 놓여짐<br><br>
+            
+            <b>5. overflow 속성</b><br>
+                <ul>
+                    <li>자식 요소가 부모 요소의 범위를 벗어났을 때, 어떻게 처리할 것인지를 지정</li>
+                    <li>hidden : 부모 영역을 벗어나는 부분을 보이지 않게 한다.</li>
+                    <li>scroll : 항상 가로, 세로 스크롤 바가 나타난다.</li>
+                    <li>auto : 부모 영역을 벗어나면 스크롤 바가 자동적으로 나타난다.</li>
+                </ul>
+            
+                <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>

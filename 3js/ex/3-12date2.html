@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example_3-12(2)</title>
+</head>
+<body>
+    <script>
+        var year = parseInt(prompt("태어난 년도는?"));
+        var month = parseInt(prompt("태어난 월은?"));
+        var day = parseInt(prompt("태어난 일은?"));
+
+        var bth = new Date(year, month+1, day);
+
+        document.write("<h2>생일 날짜 정보</h2>");        
+
+        document.write("당신의 생일은 몇 월 : "+ month+"<br />");
+        document.write("당신의 생일은 몇 일 : "+ day+"<br />");
+        
+        switch(bth.getDay()){
+            case 0 : document.write("당신의 생일은 무슨 요일 : 일요일<br />"); break;
+            case 1 : document.write("당신의 생일은 무슨 요일 : 월요일<br />"); break;
+            case 2 : document.write("당신의 생일은 무슨 요일 : 화요일<br />"); break;
+            case 3 : document.write("당신의 생일은 무슨 요일 : 수요일<br />"); break;
+            case 4 : document.write("당신의 생일은 무슨 요일 : 목요일<br />"); break;
+            case 5 : document.write("당신의 생일은 무슨 요일 : 금요일<br />"); break;
+            case 6 : document.write("당신의 생일은 무슨 요일 : 토요일<br />"); break;
+
+        }
+
+
+    </script>
+</body>
+</html>

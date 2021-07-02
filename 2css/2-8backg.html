@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>백그라운드 스타일</title>
+    <link rel="stylesheet" href="./hs.css">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>백그라운드 스타일</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. background-color : 배경색</b><br><br>
+
+            <b>2. background-iamge : 배경 이미지로 지정</b><br>
+            -> background-image : url("이미지경로");<br>
+            <br>
+
+            <b>3. background-repeat : 배경이미지 반복 여부</b><br>
+            <table border="1px">
+                <tr>
+                    <th>repeat</th>
+                    <th>repect-x</th>
+                    <th>repect-y</th>
+                    <th>no-repeat</th>
+                </tr>
+                <tr>
+                    <td>가로,세로로 반복</td>
+                    <td align="center">가로로 반복</td>
+                    <td align="center">세로로 반복</td>
+                    <td align="center">X</td>
+                </tr>
+            </table>
+            <br>
+ 
+            <b>4. background-attachment : 배경이미지 부착 방법 지정</b><br>
+                <ul>
+                    <li>scroll : 배경이 요소와 같이 스크롤 됨 (디폴트값)</li>
+                    <li>fixed : 배경이 뷰 포트에 대하여 고정됨</li>
+                </ul>
+
+            <b>5. background-size : 배경 이미지 크기 설정</b><br>
+            -> px단위 또는 퍼센트 단위로 지정 가능 (기준 : 부모 요소의 가로, 세로)</li>
+            <br><br>
+
+            <b>6. background-position : 배경 이미지 위치 설정</b><br>
+                <ul>
+                   <li>값 : 수평위치 수직위치
+                    <li>수평위치 : left / center / right / 백분율 / 길이값(px)</li>
+                    <li>수직위치 : top / center / bottom / 백분율 / 길이값(px)</li>
+                </ul>
+
+            <b>7. background</b><br>
+                <ul>
+                    <li>배경 이미지에 대한 속성 한 줄로 설정하기</li>
+                    <li> background : background-color background-iamge background-repeat background-position</li>
+                </ul>
+
+                <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>

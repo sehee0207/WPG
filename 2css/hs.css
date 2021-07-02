@@ -1,0 +1,48 @@
+h2 div{
+    color:hotpink;
+    font-style: italic;
+}
+
+hr{
+    width: 80%;
+}
+
+button{
+    border: 1px solid  rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+#text{
+    background-color: cornsilk;
+    width: 700px
+}
+
+#pic{
+    background-color: rgb(184, 223, 255);
+    width: 700px;
+}
+
+.ex{
+    width: 700px;
+}
+
+a:link{ /*방문하지 않은 */
+    color: rgb(161, 132, 216);
+}
+
+a:visited{ 
+    color: rgb(132, 161, 216);
+}
+
+a:focus{ /*클릭 했을 떄*/
+    color: rgb(209, 119, 190);
+}
+
+h2{
+    font-family: 'Do Hyeon', sans-serif;
+}
+
+body {
+    font-family: 'Nanum Gothic', sans-serif;
+}

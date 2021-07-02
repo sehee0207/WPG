@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>위치</title>
+    <link rel="stylesheet" href="./hs.css">
+</head>
+<body>
+    <h2 align="center"><div id="hs">[CSS]</div>위치</h2>
+    <hr>
+    <div>
+        <p>
+            <b>1. CSS 스타일 시트 위치 3가지</b><br>
+
+                - 내부 스타일 시트(internal style sheet)<br>
+                - 인라인 스타일 시트(inline style sheet)<br>
+                - 외부 스타일 시트(external style sheet)<br>
+
+            <ol>
+                <li>내부 스타일 시트</li>
+                <img width="400px" src="image/3-2in.png">
+                <ul>
+                    <li>내부 스타일 시트는 HTML 안에 CSS 정의</li>
+                    <li>&lt;head&gt; 태그 내에 &lt;style&gt;태그에 스타일 시트 지정</li>
+                    <li>여러 번 작성 가능</li>
+                    <li>웹 페이지 전체에 적용</li>
+                    <li>한 문서에만 해당되는 스타일을 지정할 때 사용</li>
+                </ul>
+
+                <br>
+
+                
+                <li>인라인 스타일 시트</li>
+                <img width="400px" src="./image/3-2inline.png">
+                <ul>
+                    <li>HTML요소 안에 style 속성 사용</li>
+                    <li>각각의 HTML 요소마다 스타일을 지정하는 것 -> 해당 태그에만 스타일 적용</li>
+                    <li>t스타일시트의 장점을 잃게 됨.... 꼭 필요한 경우에만 사용</li>
+                </ul>
+
+                <br>
+
+                
+                <li>외부 스타일 시트</li>
+                <img width="400px" src="./image/3-2out1.png"> -> HTML 파일<br> 
+                <img width="300px" src="./image/3-2out2.png"> -> CSS 파일<br><br>
+                <ul>
+                    <li>스타일 시트를 외부에 파일(.css)로 저장 -> 웹 페이지에서 스타일 파일을 불러 사용</li>
+                    <li><head>요소 안에 <link>태그 사용(단일태그)</li>
+                    <pre> &lt;link href="mystyle.css"       type="text/css"           rel="stylesheet"&gt; 
+                                외부 스타일 파일의 위치   연결문서의 MME유형          현재문서와 외부파일의 관계
+                                                        (css의 경우: text/css)      (stylesheet:스타일시트로 연결)
+                                                        (js의경우 text/javascript)</pre>
+                    <li>많은 페이지에 동일한 스타일을 적용 할 때 좋은 방법</li>
+                </ul>
+            </ol>
+
+            <b>2. CSS 스타일 시트 규칙</b><br>
+            1) 스타일 상속<br>
+            <ul>
+                <li>CSS3 스타일은 부모 태그로부터 상속<br>
+                    <li>부모 태그(부모 요소) : 자신을 둘러싸는 태그 </li>
+                </li>
+                <li> &lt;p&gt;태그는 &lt;em&gt;의 부모 태그</li>
+                <li> &lt;em&gt; 태그의 출력 : 글자 크기는 25px, 글자 색은 부모 &lt;p&gt; 태그를 상속받아 green</li>
+            </ul>
+
+            2) 다중 스타일 시트<br>
+            <ul>
+                <li>하나의 요소에 대하여 외부,내부,인라인 스타일에서 서로 다르게 지정하고 있다면 어떤 스타일이 사용될까?<br></li>
+                <li>ex. &lt;br&gt;, &lt;meta&gt;</blockquote></blockquote></li>
+            </ul>
+
+            3) 스타일 합치기(cascading)<br>
+             <ul>
+                <li>태그에 적용 가능한 스타일 
+                    <ol>
+                        <li>브라우저의 디폴트 스타일</li>
+                        <li>외부 스타일 시트</li>
+                        <li>내부 스타일 시트</li>
+                        <li>인라인 스타일 시트</li>
+                    </ol>
+                </li>
+                <li>스타일 합치기(cascading)
+                    <ol>
+                        <li>태그에 적용되는 모든 스타일이 합쳐지고, 동일한 스타일은, 순위가 높은 스타일이 우선 적용되는 규칙</li>
+                    </ol>
+                </li>
+            </ul>
+            <button id="menu" onClick="history.go(-1)">메뉴로 돌아가기</button>
+        </p>
+    </div>
+</body>
+</html>
